@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outfitly - Interactive Outfit Catalogue</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="catalogue-header">
+        <div class="header-container">
+            <div class="logo-group">
+                <h1>👗 Outfitly Catalogue</h1>
+            </div>
+            <div class="favorites-counter">
+                ❤️ Favorites: <span id="favCount">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search, Sort & Category Controls -->
+    <section class="controls-section">
+        <div class="search-sort-bar">
+            <!-- Real-time Search Input -->
+            <input 
+                type="text" 
+                id="searchInput" 
+                class="search-input" 
+                placeholder="🔍 Search by outfit name, piece, or occasion..."
+            >
+
+            <!-- Sorting Select -->
+            <select id="sortSelect" class="sort-select">
+                <option value="default">Sort by: Featured</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="rating-desc">Highest Rated</option>
+            </select>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="filter-tabs" id="filterContainer">
+            <button class="filter-btn active" data-category="all">All Outfits</button>
+            <button class="filter-btn" data-category="Casual">Casual</button>
+            <button class="filter-btn" data-category="Formal">Formal</button>
+            <button class="filter-btn" data-category="Party">Party</button>
+            <button class="filter-btn" data-category="Athleisure">Athleisure</button>
+            <button class="filter-btn" data-category="Winter">Winter</button>
+        </div>
+    </section>
+
+    <!-- Main Dynamic Catalogue Grid -->
+    <main class="catalogue-container">
+        <div class="outfit-grid" id="outfitGrid">
+            <!-- Dynamic Cards will be rendered here by script.js -->
+        </div>
+    </main>
+
+    <!-- Outfit Details Modal Popup -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div id="modalBody">
+                <!-- Injected via script.js -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

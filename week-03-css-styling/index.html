@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outfitly - Practical 3: CSS Demonstration</title>
+    
+    <!-- ============================================================== -->
+    <!-- 1. EXTERNAL CSS: Linked from styles.css                        -->
+    <!-- Responsible for: Global resets, navbar, card layouts, buttons   -->
+    <!-- ============================================================== -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- ============================================================== -->
+    <!-- 2. INTERNAL CSS: Written inside <style> tags within <head>     -->
+    <!-- Responsible for: Section wrappers, comparison boxes, badges    -->
+    <!-- ============================================================== -->
+    <style>
+        /* Internal CSS - Hero banner specific styling */
+        .internal-hero-section {
+            background: linear-gradient(120deg, #1e293b 0%, #334155 100%);
+            border-radius: 14px;
+            padding: 40px;
+            margin-bottom: 30px;
+            color: #ffffff;
+            position: relative;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+        }
+
+        .internal-hero-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        .internal-hero-subtitle {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            max-width: 650px;
+            margin-bottom: 20px;
+        }
+
+        /* Internal CSS - Educational comparison badges */
+        .css-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .badge-external {
+            background-color: #dbeafe;
+            color: #1d4ed8;
+            border: 1px solid #bfdbfe;
+        }
+
+        .badge-internal {
+            background-color: #fef3c7;
+            color: #b45309;
+            border: 1px solid #fde68a;
+        }
+
+        .badge-inline {
+            background-color: #dcfce7;
+            color: #15803d;
+            border: 1px solid #bbf7d0;
+        }
+
+        /* Internal CSS - Summary Information Table */
+        .css-rules-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 30px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .css-rules-table th, .css-rules-table td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 0.9rem;
+        }
+
+        .css-rules-table th {
+            background-color: #f8fafc;
+            color: #475569;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- EXTERNAL CSS: Header & Navigation -->
+    <header class="site-header">
+        <div class="site-logo">👗 Outfitly</div>
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#demo">CSS Types</a>
+            <a href="#summary">Specificity Rule</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <!-- INTERNAL CSS: Hero Section -->
+        <section class="internal-hero-section">
+            <span class="css-badge badge-internal">Styled with Internal CSS</span>
+            <h1 class="internal-hero-title">Wardrobe Styling & CSS Hierarchy</h1>
+            <p class="internal-hero-subtitle">
+                This practical demonstrates how <strong>Inline</strong>, <strong>Internal</strong>, and <strong>External</strong> CSS work together harmoniously within a single Outfitly web page.
+            </p>
+        </section>
+
+        <!-- ============================================================== -->
+        <!-- 3. INLINE CSS: Applied directly via style="..." attribute       -->
+        <!-- Used here for urgent stylist alerts, personalized custom tags   -->
+        <!-- ============================================================== -->
+        <div style="background-color: #fff1f2; border-left: 6px solid #e11d48; padding: 16px 20px; border-radius: 8px; margin-bottom: 30px; box-shadow: 0 2px 4px rgba(225, 29, 72, 0.08);">
+            <span class="css-badge badge-inline">Styled with Inline CSS</span>
+            <h4 style="color: #9f1239; margin-bottom: 4px; font-size: 1.05rem;">🔥 Daily Stylist Alert (Inline Style Applied)</h4>
+            <p style="color: #881337; font-size: 0.92rem; margin: 0;">
+                Today's forecast indicates mild rain. Outfitly recommends pairing waterproof trenches with dark denim. 
+                <em style="color: #be123c; font-weight: bold;">(This alert box uses style="..." directly on the div element)</em>
+            </p>
+        </div>
+
+        <!-- OUTFIT GRID: Combining External, Internal, and Inline CSS -->
+        <section id="demo">
+            <h2 style="font-size: 1.5rem; color: #0f172a; margin-bottom: 5px;">Curated Seasonal Outfits</h2>
+            <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 15px;">Notice how each card demonstrates different CSS methods:</p>
+
+            <div class="outfit-grid">
+                
+                <!-- CARD 1: External CSS dominated -->
+                <article class="outfit-card">
+                    <div class="card-header-visual">☕</div>
+                    <div class="card-body">
+                        <span class="css-badge badge-external">External CSS</span>
+                        <h3 class="outfit-title">Urban Minimalist Casual</h3>
+                        <p class="outfit-desc">
+                            Clean beige overshirt paired with straight-leg ecru chinos and classic canvas slip-ons.
+                        </p>
+                        <a href="#" class="btn-primary">View Details</a>
+                    </div>
+                </article>
+
+                <!-- CARD 2: Internal CSS element demo -->
+                <article class="outfit-card">
+                    <div class="card-header-visual">💼</div>
+                    <div class="card-body">
+                        <span class="css-badge badge-internal">Internal CSS Element</span>
+                        <h3 class="outfit-title">Corporate Executive Sharp</h3>
+                        <p class="outfit-desc">
+                            Tailored navy blazer, Egyptian cotton sky-blue shirt, charcoal trousers and oxfords.
+                        </p>
+                        <a href="#" class="btn-primary">View Details</a>
+                    </div>
+                </article>
+
+                <!-- CARD 3: Inline CSS overriding styles -->
+                <article class="outfit-card" style="border: 2px dashed #16a34a; background-color: #f0fdf4;">
+                    <!-- Inline CSS applied on the header visual -->
+                    <div class="card-header-visual" style="background-color: #dcfce7; color: #166534;">🎉</div>
+                    <div class="card-body">
+                        <span class="css-badge badge-inline">Inline CSS Highlight</span>
+                        <h3 class="outfit-title" style="color: #15803d;">Weekend Party Statement</h3>
+                        <p class="outfit-desc" style="color: #166534;">
+                            Metallic emerald bomber jacket, distressed black jeans, and high-top sneakers.
+                        </p>
+                        <!-- Inline CSS Button -->
+                        <a href="#" style="background-color: #16a34a; color: #ffffff; padding: 8px 18px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; display: inline-block;">
+                            Featured Deal (Inline)
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SUMMARY TABLE: CSS Method Comparison -->
+        <section id="summary" style="margin-top: 40px;">
+            <h2 style="font-size: 1.4rem; color: #0f172a; margin-bottom: 10px;">Comparison of the Three CSS Types</h2>
+            
+            <table class="css-rules-table">
+                <thead>
+                    <tr>
+                        <th>Type of CSS</th>
+                        <th>Implementation Method</th>
+                        <th>Specificity Priority</th>
+                        <th>Best Use Case in Outfitly</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1. External CSS</strong></td>
+                        <td>In a separate <code>.css</code> file linked with <code>&lt;link rel="stylesheet"&gt;</code></td>
+                        <td>Standard (Lowest of three)</td>
+                        <td>Site-wide themes, grids, cards, typography, reusable components.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2. Internal CSS</strong></td>
+                        <td>Inside <code>&lt;style&gt;</code> tags in document <code>&lt;head&gt;</code></td>
+                        <td>Medium (Overrides External)</td>
+                        <td>Page-specific layouts, single-page promotional banners, page-specific animations.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3. Inline CSS</strong></td>
+                        <td>Inside the <code>style="..."</code> attribute of an HTML element</td>
+                        <td>Highest (Overrides Internal & External)</td>
+                        <td>One-off quick styling, flash sale callouts, dynamic script color changes.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <!-- EXTERNAL CSS: Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Outfitly - Practical 3: Demonstrating Inline, Internal & External CSS.</p>
+    </footer>
+
+</body>
+</html>

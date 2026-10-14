@@ -1,0 +1,132 @@
+/* ================================================================
+   OUTFITLY - EXTERNAL STYLESHEET (styles.css)
+   PRACTICAL 3: INLINE, INTERNAL & EXTERNAL CSS DEMONSTRATION
+   ================================================================ */
+
+/* CSS Reset & Global Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* Global Container */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* External Styled Header */
+.site-header {
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.site-logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #38bdf8;
+}
+
+.nav-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+/* External Styled Outfit Grid */
+.outfit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+/* External Styled Outfit Card */
+.outfit-card {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.outfit-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card-header-visual {
+    background: #f1f5f9;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.outfit-title {
+    font-size: 1.25rem;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.outfit-desc {
+    font-size: 0.92rem;
+    color: #64748b;
+    margin-bottom: 15px;
+}
+
+/* External Buttons */
+.btn-primary {
+    display: inline-block;
+    background-color: #2563eb;
+    color: #ffffff;
+    padding: 8px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+}
+
+/* External Footer */
+.site-footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 50px;
+    font-size: 0.88rem;
+}

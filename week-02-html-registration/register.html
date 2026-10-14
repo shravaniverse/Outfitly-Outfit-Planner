@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outfitly - Member Registration Form</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f7f6; margin: 0; padding: 20px; color: #2d3748;">
+
+    <!-- ==================== HEADER ==================== -->
+    <header style="text-align: center; margin-bottom: 25px;">
+        <h1 style="color: #2c3e50; margin-bottom: 5px;">👗 Outfitly - Join the Community</h1>
+        <p style="color: #718096; margin-top: 0;">Create your personal wardrobe profile to get curated outfit recommendations</p>
+    </header>
+
+    <!-- ==================== REGISTRATION FORM CONTAINER ==================== -->
+    <main style="max-width: 650px; margin: auto; background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-top: 4px solid #319795;">
+        
+        <h2 style="color: #234e52; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; margin-top: 0;">
+            Wardrobe Member Registration
+        </h2>
+        <p style="font-size: 13px; color: #e53e3e; margin-bottom: 20px;">* Fields marked with an asterisk are required.</p>
+
+        <!-- Dynamic Success Banner -->
+        <div id="successBanner" style="display: none; background-color: #ecfdf5; border: 1.5px solid #10b981; color: #065f46; padding: 18px; border-radius: 8px; margin-bottom: 25px; box-shadow: 0 2px 6px rgba(16, 185, 129, 0.15);">
+            <h3 style="margin: 0 0 6px 0; font-size: 1.15rem; color: #047857;">🎉 Registration Successful!</h3>
+            <p id="successMessage" style="margin: 0 0 12px 0; font-size: 0.95rem; line-height: 1.5;"></p>
+            <a href="../week-01-html-pages/login.html" style="display: inline-block; background-color: #059669; color: white; padding: 8px 18px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 0.9rem;">Proceed to Sign In →</a>
+        </div>
+
+        <!-- Dynamic Error Banner -->
+        <div id="errorBanner" style="display: none; background-color: #fef2f2; border: 1.5px solid #ef4444; color: #991b1b; padding: 18px; border-radius: 8px; margin-bottom: 25px; box-shadow: 0 2px 6px rgba(239, 68, 68, 0.15);">
+            <h3 style="margin: 0 0 6px 0; font-size: 1.15rem; color: #b91c1c;">⚠️ Registration Error</h3>
+            <p id="errorMessage" style="margin: 0; font-size: 0.95rem; line-height: 1.5;"></p>
+        </div>
+
+        <!-- Form with HTML5 & JavaScript Handling -->
+        <form id="registrationForm" action="#" method="post" autocomplete="on">
+
+            <!-- Fieldset 1: Account Information -->
+            <fieldset style="border: 1px solid #cbd5e0; border-radius: 6px; padding: 18px; margin-bottom: 20px;">
+                <legend style="font-weight: bold; color: #2b6cb0; padding: 0 8px;">1. Account Details</legend>
+
+                <!-- Full Name -->
+                <div style="margin-bottom: 15px;">
+                    <label for="fullName" style="display: block; font-weight: bold; margin-bottom: 5px;">Full Name *</label>
+                    <input 
+                        type="text" 
+                        id="fullName" 
+                        name="fullName" 
+                        placeholder="e.g. Alex Morgan" 
+                        required 
+                        minlength="3" 
+                        maxlength="40" 
+                        style="width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #cbd5e0; border-radius: 4px;"
+                    >
+                    <small style="color: #718096;">Must be 3 to 40 characters.</small>
+                </div>
+
+                <!-- Username -->
+                <div style="margin-bottom: 15px;">
+                    <label for="username" style="display: block; font-weight: bold; margin-bottom: 5px;">Username *</label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        name="username" 
+                        placeholder="e.g. style_alex" 
+                        required 
+                        minlength="4" 
+                        maxlength="20" 
+                        pattern="^[a-zA-Z0-9_]+$" 
+                        title="Username should only contain letters, numbers, and underscores (min 4 characters)"
+                        style="width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #cbd5e0; border-radius: 4px;"
+                    >
+                    <small style="color: #718096;">Letters, numbers, and underscores only.</small>
+                </div>
+
+                <!-- Email -->
+                <div style="margin-bottom: 15px;">
+                    <label for="email" style="display: block; font-weight: bold; margin-bottom: 5px;">Email Address *</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="alex@college.edu" 
+                        required 
+                        style="width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #cbd5e0; border-radius: 4px;"
+                    >
+                    <small style="color: #718096;">A valid email containing '@' and domain is required.</small>
+                </div>
+
+                <!-- Password -->
+                <div style="margin-bottom: 15px;">
+                    <label for="password" style="display: block; font-weight: bold; margin-bottom: 5px;">Password *</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        placeholder="Minimum 8 characters" 
+                        required 
+                        minlength="8" 
+                        style="width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #cbd5e0; border-radius: 4px;"
+                    >
+                    <small style="color: #718096;">At least 8 characters long.</small>
+                </div>
+
+                <!-- Contact Number -->
+                <div style="margin-bottom: 10px;">
+                    <label for="phone" style="display: block; font-weight: bold; margin-bottom: 5px;">Phone Number (10 digits) *</label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone" 
+                        placeholder="9876543210" 
+                        required 
+                        pattern="[0-9]{10}" 
+                        title="Please enter a valid 10-digit mobile number"
+                        style="width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #cbd5e0; border-radius: 4px;"
+                    >
+                    <small style="color: #718096;">Exactly 10 numeric digits.</small>
+                </div>
+            </fieldset>
+
+            <!-- Fieldset 2: Fashion & Personal Profile -->
+            <fieldset style="border: 1px solid #cbd5e0; border-radius: 6px; padding: 18px; margin-bottom: 20px;">
+                <legend style="font-weight: bold; color: #2b6cb0; padding: 0 8px;">2. Personal Fashion Preferences</legend>
+
+                <!-- Date of Birth & Age -->
+                <div style="margin-bottom: 15px;">
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td width="48%">
+                                <label for="dob" style="display: block; font-weight: bold; margin-bottom: 5px;">Date of Birth *</label>
+                                <input 
+                                    type="date" 
+                                    id="dob" 
+                                    name="dob" 
+                                    required 
+                                    style="width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #cbd5e0; border-radius: 4px;"
+                                >
+                            </td>
+                            <td width="4%"></td>
+                            <td width="48%">
+                                <label for="age" style="display: block; font-weight: bold; margin-bottom: 5px;">Age (13 - 100) *</label>
+                                <input 
+                                    type="number" 
+                                    id="age" 
+                                    name="age" 
+                                    min="13" 
+                                    max="100" 
+                                    placeholder="20" 
+                                    required 
+                                    style="width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #cbd5e0; border-radius: 4px;"
+                                >
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- Gender / Wardrobe Section -->
+                <div style="margin-bottom: 15px;">
+                    <label style="display: block; font-weight: bold; margin-bottom: 8px;">Preferred Wardrobe Section *</label>
+                    <label style="margin-right: 15px; cursor: pointer;">
+                        <input type="radio" name="genderSection" value="menswear" required> Menswear
+                    </label>
+                    <label style="margin-right: 15px; cursor: pointer;">
+                        <input type="radio" name="genderSection" value="womenswear"> Womenswear
+                    </label>
+                    <label style="cursor: pointer;">
+                        <input type="radio" name="genderSection" value="unisex"> Unisex / All
+                    </label>
+                </div>
+
+                <!-- Primary Style Aesthetic (Dropdown) -->
+                <div style="margin-bottom: 15px;">
+                    <label for="primaryStyle" style="display: block; font-weight: bold; margin-bottom: 5px;">Primary Style Aesthetic *</label>
+                    <select 
+                        id="primaryStyle" 
+                        name="primaryStyle" 
+                        required 
+                        style="width: 100%; padding: 8px; border: 1px solid #cbd5e0; border-radius: 4px; background-color: #fff;"
+                    >
+                        <option value="">-- Choose your dominant aesthetic --</option>
+                        <option value="casual">Casual & Minimalist</option>
+                        <option value="formal">Business Formal & Smart Casual</option>
+                        <option value="streetwear">Streetwear & Urban</option>
+                        <option value="vintage">Vintage & Retro</option>
+                        <option value="athleisure">Athleisure & Sporty</option>
+                        <option value="ethnic">Traditional & Festive</option>
+                    </select>
+                </div>
+
+                <!-- Favorite Wardrobe Categories (Checkboxes) -->
+                <div style="margin-bottom: 15px;">
+                    <label style="display: block; font-weight: bold; margin-bottom: 8px;">Items you plan to catalogue (Optional):</label>
+                    <label style="margin-right: 15px; cursor: pointer;"><input type="checkbox" name="items" value="tops" checked> Tops / Shirts / Tees</label>
+                    <label style="margin-right: 15px; cursor: pointer;"><input type="checkbox" name="items" value="bottoms" checked> Trousers / Jeans</label>
+                    <label style="margin-right: 15px; cursor: pointer;"><input type="checkbox" name="items" value="footwear"> Footwear</label>
+                    <label style="cursor: pointer;"><input type="checkbox" name="items" value="accessories"> Accessories</label>
+                </div>
+
+                <!-- Style Bio -->
+                <div style="margin-bottom: 10px;">
+                    <label for="styleBio" style="display: block; font-weight: bold; margin-bottom: 5px;">Personal Style Note / Bio (Optional)</label>
+                    <textarea 
+                        id="styleBio" 
+                        name="styleBio" 
+                        rows="3" 
+                        placeholder="Tell us about colors you like or brands you wear frequently..." 
+                        style="width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #cbd5e0; border-radius: 4px;"
+                    ></textarea>
+                </div>
+            </fieldset>
+
+            <!-- Fieldset 3: Terms and Consent -->
+            <div style="margin-bottom: 20px;">
+                <label style="font-size: 14px; cursor: pointer;">
+                    <input type="checkbox" name="terms" id="terms" required> 
+                    I agree to the Outfitly <a href="#" style="color: #3182ce;">Terms of Service</a> and allow personalized wardrobe suggestions. *
+                </label>
+            </div>
+
+            <!-- Submit and Reset Buttons -->
+            <div style="display: flex; gap: 15px;">
+                <input 
+                    type="submit" 
+                    id="submitBtn"
+                    value="Complete Registration" 
+                    style="flex: 2; background-color: #319795; color: white; padding: 12px; border: none; border-radius: 5px; font-weight: bold; font-size: 15px; cursor: pointer;"
+                >
+                <input 
+                    type="reset" 
+                    value="Clear Form" 
+                    style="flex: 1; background-color: #e2e8f0; color: #4a5568; padding: 12px; border: none; border-radius: 5px; font-weight: bold; font-size: 15px; cursor: pointer;"
+                >
+            </div>
+
+        </form>
+
+        <!-- Navigation back -->
+        <p style="text-align: center; margin-top: 20px; font-size: 14px;">
+            Already have an account? <a href="../week-01-html-pages/login.html" style="color: #3182ce; text-decoration: none; font-weight: bold;">Login here</a>
+        </p>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer style="text-align: center; margin-top: 30px; font-size: 13px; color: #a0aec0;">
+        <p>&copy; 2026 Outfitly - Practical 2: HTML5 Form with Native Input Validation</p>
+    </footer>
+
+    <!-- JavaScript Registration Handler -->
+    <script src="register.js"></script>
+</body>
+</html>

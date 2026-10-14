@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outfitly - Practical 6 XML Data Viewer</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            padding: 30px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        h1 { color: #2563eb; margin-bottom: 5px; }
+        p.subtitle { color: #64748b; margin-top: 0; }
+        .xml-box {
+            background-color: #0f172a;
+            color: #38bdf8;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: Consolas, monospace;
+            font-size: 0.9rem;
+            white-space: pre-wrap;
+            overflow-x: auto;
+            max-height: 450px;
+            overflow-y: auto;
+            border: 1px solid #334155;
+        }
+        .info-card {
+            background: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            padding: 12px 16px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-size: 0.92rem;
+            color: #1e40af;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>👗 Outfitly Wardrobe XML Viewer</h1>
+    <p class="subtitle">Practical 6: Inspecting Well-Formed XML Wardrobe Data Structure</p>
+
+    <div class="info-card">
+        <strong>💡 Note:</strong> Below is the content loaded directly from <code>outfits.xml</code>. You can also right-click and open <code>outfits.xml</code> directly in your web browser to inspect the interactive XML DOM tree.
+    </div>
+
+    <h3>Raw XML Document Preview:</h3>
+    <div class="xml-box" id="xmlDisplay">Loading outfits.xml...</div>
+</div>
+
+<script>
+    fetch('outfits.xml')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('xmlDisplay').textContent = data;
+        })
+        .catch(err => {
+            document.getElementById('xmlDisplay').textContent = 
+                "Could not load via fetch due to local file restrictions. Open 'outfits.xml' directly in your browser or run via Live Server.";
+        });
+</script>
+
+</body>
+</html>

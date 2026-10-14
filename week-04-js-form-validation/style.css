@@ -1,0 +1,191 @@
+/* ================================================================
+   OUTFITLY - PRACTICAL 4: JAVASCRIPT FORM VALIDATION STYLES
+   ================================================================ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    padding: 30px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-wrapper {
+    background: #ffffff;
+    width: 100%;
+    max-width: 580px;
+    padding: 35px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-header h2 {
+    color: #1e293b;
+    font-size: 1.8rem;
+    margin-bottom: 6px;
+}
+
+.form-header p {
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+.form-group {
+    margin-bottom: 18px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #334155;
+    font-size: 0.9rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    color: #1e293b;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* Valid & Invalid States via JS */
+.form-control.is-invalid {
+    border-color: #ef4444;
+    background-color: #fef2f2;
+}
+
+.form-control.is-valid {
+    border-color: #22c55e;
+    background-color: #f0fdf4;
+}
+
+.error-message {
+    color: #dc2626;
+    font-size: 0.8rem;
+    margin-top: 4px;
+    display: block;
+    min-height: 18px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* Checkbox container */
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.88rem;
+    color: #475569;
+    margin-bottom: 20px;
+}
+
+.checkbox-group input {
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+/* Action Buttons */
+.btn-group {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-submit {
+    flex: 2;
+    background-color: #2563eb;
+    color: #ffffff;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-reset {
+    flex: 1;
+    background-color: #e2e8f0;
+    color: #475569;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-reset:hover {
+    background-color: #cbd5e1;
+}
+
+/* Success Card Modal / Box */
+.success-banner {
+    display: none;
+    background-color: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    color: #065f46;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.success-banner h3 {
+    margin-bottom: 4px;
+    font-size: 1.1rem;
+}
+
+/* Error Alert Box */
+.error-banner {
+    display: none;
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.error-banner h3 {
+    margin-bottom: 4px;
+    font-size: 1.1rem;
+    color: #b91c1c;
+}

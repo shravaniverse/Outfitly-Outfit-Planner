@@ -1,0 +1,13 @@
+{
+  "name": "outfitly-week-11-typescript",
+  "version": "1.0.0",
+  "description": "Practical 11: TypeScript Classes, Interfaces, and Functions for Outfitly",
+  "main": "dist/outfit.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/outfit.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}

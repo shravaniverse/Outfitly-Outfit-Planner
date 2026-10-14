@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ================================================================
+     OUTFITLY - PRACTICAL 6: XML DATA FILE
+     This file stores wardrobe outfit records in a structured,
+     well-formed XML format.
+     ================================================================ -->
+<wardrobe owner="Outfitly Lab Student" seasonYear="2026">
+
+    <!-- Outfit 1: Casual Campus Ensemble -->
+    <outfit id="OFT101" category="Casual" gender="Unisex">
+        <name>Urban Denim Campus Ensemble</name>
+        <occasion>Daily Lectures &amp; Library</occasion>
+        <season>Autumn</season>
+        <pieces>
+            <top fabric="Cotton" color="Navy Blue">Crewneck Tee with Chambray Overshirt</top>
+            <bottom fabric="Stretch Twill" color="Charcoal Grey">Slim-fit Chino Pants</bottom>
+            <footwear style="Sneakers" color="White">Minimalist Low-Top Leather Sneakers</footwear>
+            <accessories>
+                <item type="Watch">Matte Black Analog Watch</item>
+                <item type="Bag">Waterproof Laptop Backpack</item>
+            </accessories>
+        </pieces>
+        <price currency="INR">2499</price>
+        <rating>4.8</rating>
+        <inStock>true</inStock>
+        <stylingAdvice>Roll overshirt sleeves up to forearm level for an easy, effortless silhouette.</stylingAdvice>
+    </outfit>
+
+    <!-- Outfit 2: Formal Corporate / Viva Suit -->
+    <outfit id="OFT102" category="Formal" gender="Menswear">
+        <name>Executive Presentation Blazer Set</name>
+        <occasion>Internship Viva &amp; Project Reviews</occasion>
+        <season>All-Season</season>
+        <pieces>
+            <top fabric="Super 120s Wool" color="Navy Blue">Two-Button Structured Blazer &amp; White Shirt</top>
+            <bottom fabric="Tailored Wool" color="Navy Blue">Flat-front Formal Trousers</bottom>
+            <footwear style="Oxfords" color="Cognac Brown">Full Grain Leather Dress Shoes</footwear>
+            <accessories>
+                <item type="Tie">Silk Micro-Print Navy Tie</item>
+                <item type="Belt">Full Grain Leather Belt Matching Shoes</item>
+            </accessories>
+        </pieces>
+        <price currency="INR">6999</price>
+        <rating>4.9</rating>
+        <inStock>true</inStock>
+        <stylingAdvice>Ensure belt leather tone strictly matches footwear for a sharp executive finish.</stylingAdvice>
+    </outfit>
+
+    <!-- Outfit 3: College Fest / Night Out -->
+    <outfit id="OFT103" category="Party" gender="Unisex">
+        <name>Neon Glow Fest Statement</name>
+        <occasion>Cultural Night &amp; College Festival</occasion>
+        <season>Spring / Summer</season>
+        <pieces>
+            <top fabric="Rayon" color="Black &amp; Amber">Abstract Cuban Collar Bowling Shirt</top>
+            <bottom fabric="Denim" color="Jet Black">Relaxed Tapered Cargo Jeans</bottom>
+            <footwear style="High-Tops" color="Black/Orange">Chunky Sole High-Top Sneakers</footwear>
+            <accessories>
+                <item type="Jewelry">Layered Silver Cuban Chain</item>
+                <item type="Eyewear">Retro Tinted Sunglasses</item>
+            </accessories>
+        </pieces>
+        <price currency="INR">3899</price>
+        <rating>4.7</rating>
+        <inStock>true</inStock>
+        <stylingAdvice>Keep shirt unbuttoned to mid-chest with silver chains resting flat against collarbone.</stylingAdvice>
+    </outfit>
+
+    <!-- Outfit 4: Alpine Winter Overcoat -->
+    <outfit id="OFT104" category="Winter" gender="Unisex">
+        <name>Alpine Camel Wool Trench</name>
+        <occasion>Cold Weather Commutes &amp; Gatherings</occasion>
+        <season>Winter</season>
+        <pieces>
+            <top fabric="Wool Blend" color="Camel Tan">Double-Breasted Trench with Off-White Knit Turtleneck</top>
+            <bottom fabric="Heavy Denim" color="Raw Indigo">Selvedge Straight Cut Jeans</bottom>
+            <footwear style="Boots" color="Dark Brown">Suede Water-Resistant Chelsea Boots</footwear>
+            <accessories>
+                <item type="Scarf">Cashmere Tartan Plaid Scarf</item>
+                <item type="Gloves">Fleece Lined Leather Gloves</item>
+            </accessories>
+        </pieces>
+        <price currency="INR">5499</price>
+        <rating>4.9</rating>
+        <inStock>false</inStock>
+        <stylingAdvice>Tuck the turtleneck neatly and wrap scarf in a Parisian knot for thermal efficiency and elegance.</stylingAdvice>
+    </outfit>
+
+    <!-- Outfit 5: Morning Athletic / Gym -->
+    <outfit id="OFT105" category="Athleisure" gender="Unisex">
+        <name>Aero-Fit Cardio Set</name>
+        <occasion>Sports Ground &amp; Gym Session</occasion>
+        <season>All-Season</season>
+        <pieces>
+            <top fabric="Dri-FIT Polyester" color="Smoke Grey">Moisture Wicking Training Tee</top>
+            <bottom fabric="Spandex Blend" color="Black">Compression Leggings with Running Shorts</bottom>
+            <footwear style="Running" color="Volt Green">Air Cushion Performance Running Shoes</footwear>
+            <accessories>
+                <item type="Wearable">Fitness Smart Band</item>
+                <item type="Headwear">Breathable Mesh Sports Cap</item>
+            </accessories>
+        </pieces>
+        <price currency="INR">1999</price>
+        <rating>4.6</rating>
+        <inStock>true</inStock>
+        <stylingAdvice>Pair with no-show athletic socks to avoid ankle friction during high-intensity training.</stylingAdvice>
+    </outfit>
+
+</wardrobe>

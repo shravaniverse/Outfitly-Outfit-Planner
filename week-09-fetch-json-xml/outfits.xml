@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wardrobe>
+    <outfit id="X201" category="Formal">
+        <name>Royal Navy Two-Piece Tuxedo</name>
+        <season>Winter</season>
+        <price>8900</price>
+        <top>Shawl Lapel Midnight Blue Tuxedo Jacket &amp; Marcella Shirt</top>
+        <bottom>Matching Tailored Wool Trousers</bottom>
+        <footwear>Glossy Black Patent Leather Oxfords</footwear>
+        <tag>Luxury</tag>
+    </outfit>
+    <outfit id="X202" category="Casual">
+        <name>University Pastel Hoodie Combo</name>
+        <season>Spring</season>
+        <price>2650</price>
+        <top>Dusty Rose Oversized Cotton Hoodie</top>
+        <bottom>Light Wash Straight Leg Jeans</bottom>
+        <footwear>Retro Cream Canvas High-Tops</footwear>
+        <tag>Campus</tag>
+    </outfit>
+    <outfit id="X203" category="Athleisure">
+        <name>Performance Gym &amp; Track Fit</name>
+        <season>All-Season</season>
+        <price>2100</price>
+        <top>Seamless Quick-Dry Athletic Muscle Tee</top>
+        <bottom>Tapered Compression Jogger Pants</bottom>
+        <footwear>Dynamic Cushion Running Shoes</footwear>
+        <tag>Fitness</tag>
+    </outfit>
+</wardrobe>

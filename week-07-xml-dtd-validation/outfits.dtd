@@ -1,0 +1,66 @@
+<!-- ================================================================
+     OUTFITLY - PRACTICAL 7: DOCUMENT TYPE DEFINITION (DTD)
+     File: outfits.dtd
+     Validates the structure, element hierarchy, and attributes of outfits.xml
+     ================================================================ -->
+
+<!-- Root Element Declaration: Wardrobe containing one or more outfits -->
+<!ELEMENT wardrobe (outfit+)>
+
+<!-- Attributes of Root Element 'wardrobe' -->
+<!ATTLIST wardrobe 
+    owner CDATA #REQUIRED
+    seasonYear CDATA #REQUIRED>
+
+<!-- Element 'outfit' Declaration with strict child element ordering -->
+<!ELEMENT outfit (name, occasion, season, pieces, price, rating, inStock, stylingAdvice)>
+
+<!-- Attributes of 'outfit': Unique ID, Category enumeration, Gender enumeration -->
+<!ATTLIST outfit 
+    id ID #REQUIRED
+    category (Casual | Formal | Party | Winter | Athleisure) #REQUIRED
+    gender (Menswear | Womenswear | Unisex) #REQUIRED>
+
+<!-- Child Elements of 'outfit' containing Parsed Character Data (#PCDATA) -->
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT occasion (#PCDATA)>
+<!ELEMENT season (#PCDATA)>
+
+<!-- Compound Element 'pieces': Top, Bottom, Footwear, and optional Accessories -->
+<!ELEMENT pieces (top, bottom, footwear, accessories?)>
+
+<!-- Top garment element and attributes -->
+<!ELEMENT top (#PCDATA)>
+<!ATTLIST top 
+    fabric CDATA #IMPLIED
+    color CDATA #IMPLIED>
+
+<!-- Bottom garment element and attributes -->
+<!ELEMENT bottom (#PCDATA)>
+<!ATTLIST bottom 
+    fabric CDATA #IMPLIED
+    color CDATA #IMPLIED>
+
+<!-- Footwear element and attributes -->
+<!ELEMENT footwear (#PCDATA)>
+<!ATTLIST footwear 
+    style CDATA #IMPLIED
+    color CDATA #IMPLIED>
+
+<!-- Optional Accessories container holding one or more accessory items -->
+<!ELEMENT accessories (item+)>
+
+<!-- Individual accessory item element and required type attribute -->
+<!ELEMENT item (#PCDATA)>
+<!ATTLIST item 
+    type CDATA #REQUIRED>
+
+<!-- Price element with fixed INR currency attribute -->
+<!ELEMENT price (#PCDATA)>
+<!ATTLIST price 
+    currency CDATA #FIXED "INR">
+
+<!-- Remaining outfit specifications -->
+<!ELEMENT rating (#PCDATA)>
+<!ELEMENT inStock (#PCDATA)>
+<!ELEMENT stylingAdvice (#PCDATA)>

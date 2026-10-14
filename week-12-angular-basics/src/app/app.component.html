@@ -1,0 +1,72 @@
+<!-- 1. COMPONENT & PROPERTY BINDING -->
+<app-navbar 
+  [totalOutfits]="outfits.length" 
+  [favoriteCount]="favoriteCount"
+></app-navbar>
+
+<main class="main-wrapper">
+  
+  <!-- Demonstration Header -->
+  <section class="intro-section">
+    <h1>{{ title }}</h1>
+    <p>Exploring Angular Standalone Components, 4 Types of Data Binding, and Structural/Attribute Directives.</p>
+  </section>
+
+  <!-- CONTROLS: TWO-WAY DATA BINDING [()] & EVENT BINDING () -->
+  <section class="controls-card">
+    <div class="control-row">
+      
+      <!-- Two-Way Binding: [(ngModel)] -->
+      <div class="input-group">
+        <label for="search">🔍 Search Outfits (Two-Way Binding):</label>
+        <input 
+          type="text" 
+          id="search" 
+          [(ngModel)]="searchKeyword" 
+          placeholder="Type outfit name or garment..."
+          class="form-input"
+        >
+        <small class="live-preview">Binding Value: "<em>{{ searchKeyword }}</em>"</small>
+      </div>
+
+      <!-- Two-Way Binding: [(ngModel)] on select -->
+      <div class="input-group">
+        <label for="catSelect">🏷️ Filter by Category:</label>
+        <select id="catSelect" [(ngModel)]="selectedCategory" class="form-input">
+          <!-- Structural Directive: *ngFor -->
+          <option *ngFor="let cat of categories" [value]="cat">
+            {{ cat }}
+          </option>
+        </select>
+      </div>
+
+      <!-- Event Binding: (click) -->
+      <div class="btn-group">
+        <button (click)="resetFilters()" class="btn-reset">
+          ↺ Reset Filters
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. STRUCTURAL DIRECTIVE: *ngIf / else -->
+  <div *ngIf="filteredOutfits.length === 0; else gridTemplate" class="empty-notice">
+    <h3>No matching outfits found</h3>
+    <p>Try searching for a different item or resetting the category filter.</p>
+    <button (click)="resetFilters()" class="btn-reset">Clear Filters</button>
+  </div>
+
+  <!-- 4. STRUCTURAL DIRECTIVE: *ngFor Iteration Template -->
+  <ng-template #gridTemplate>
+    <section class="catalogue-grid">
+      <!-- Child Component instantiation with Input & Output Binding -->
+      <app-outfit-card
+        *ngFor="let outfit of filteredOutfits; let i = index"
+        [outfit]="outfit"
+        (favoriteToggled)="handleFavoriteToggle($event)"
+      ></app-outfit-card>
+    </section>
+  </ng-template>
+
+</main>

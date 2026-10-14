@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outfitly - Practical 9: Fetch JSON & XML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <header class="header">
+            <h1>👗 Outfitly Async Data Loader</h1>
+            <p>Practical 9: Retrieving and Parsing JSON and XML Data via the Fetch API</p>
+        </header>
+
+        <!-- Fetch Triggers -->
+        <div class="control-panel">
+            <button id="fetchJsonBtn" class="btn-fetch btn-json">📥 Fetch &amp; Parse JSON (outfits.json)</button>
+            <button id="fetchXmlBtn" class="btn-fetch btn-xml">📄 Fetch &amp; Parse XML (outfits.xml)</button>
+            <button id="clearBtn" class="btn-fetch" style="background: #e2e8f0; color: #334155;">Clear Cards</button>
+        </div>
+
+        <!-- Status message -->
+        <div id="statusMessage" class="info-status">Click a button above to fetch and parse either JSON or XML dataset.</div>
+
+        <!-- Output Cards Grid -->
+        <div id="displayGrid" class="cards-grid">
+            <!-- Cards populated dynamically via script.js -->
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

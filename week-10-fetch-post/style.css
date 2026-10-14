@@ -1,0 +1,162 @@
+/* ================================================================
+   OUTFITLY - PRACTICAL 10: FETCH POST REQUEST STYLES
+   ================================================================ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    padding: 30px 15px;
+    line-height: 1.6;
+}
+
+.layout-wrapper {
+    max-width: 1050px;
+    margin: auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.header h1 {
+    color: #0f172a;
+    font-size: 2rem;
+    margin-bottom: 6px;
+}
+
+.header p {
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+.two-col-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+@media (max-width: 768px) {
+    .two-col-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card-box {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    color: #1e293b;
+    margin-bottom: 18px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 8px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 0.92rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-control:focus {
+    border-color: #2563eb;
+}
+
+.btn-post {
+    width: 100%;
+    background-color: #2563eb;
+    color: #ffffff;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+.btn-post:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-post:disabled {
+    background-color: #94a3b8;
+    cursor: not-allowed;
+}
+
+/* Response & Terminal Box */
+.terminal-box {
+    background-color: #0f172a;
+    color: #38bdf8;
+    padding: 18px;
+    border-radius: 8px;
+    font-family: Consolas, monospace;
+    font-size: 0.85rem;
+    white-space: pre-wrap;
+    max-height: 280px;
+    overflow-y: auto;
+    border: 1px solid #334155;
+    margin-bottom: 20px;
+}
+
+.status-tag {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.status-tag.created {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-tag.idle {
+    background: #e2e8f0;
+    color: #475569;
+}
+
+.status-tag.sending {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.preview-card {
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 1.5px dashed #cbd5e1;
+    padding: 15px;
+    display: none;
+}

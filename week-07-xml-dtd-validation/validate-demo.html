@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outfitly - Practical 7 DTD Validation Guide</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f1f5f9;
+            color: #0f172a;
+            padding: 30px 20px;
+        }
+        .container {
+            max-width: 960px;
+            margin: auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.06);
+        }
+        h1 { color: #0284c7; }
+        .rule-card {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #0284c7;
+            padding: 16px 20px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+        pre {
+            background: #0f172a;
+            color: #38bdf8;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-size: 0.9rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid #cbd5e1;
+            padding: 10px 14px;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+        th { background: #f8fafc; color: #334155; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>📋 DTD Validation Specification (outfits.dtd)</h1>
+    <p>Practical 7: Demonstrating how Document Type Definitions ensure data integrity for Outfitly XML documents.</p>
+
+    <div class="rule-card">
+        <h3>How DTD Links to XML:</h3>
+        <p>In <code>outfits.xml</code>, the following document type declaration binds the schema:</p>
+        <pre>&lt;!DOCTYPE wardrobe SYSTEM "outfits.dtd"&gt;</pre>
+    </div>
+
+    <h3>DTD Rules Implemented:</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Element / Attribute</th>
+                <th>DTD Declaration</th>
+                <th>Validation Meaning</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>wardrobe</code></td>
+                <td><code>&lt;!ELEMENT wardrobe (outfit+)&gt;</code></td>
+                <td>Root element must contain 1 or more <code>outfit</code> children.</td>
+            </tr>
+            <tr>
+                <td><code>outfit id</code></td>
+                <td><code>id ID #REQUIRED</code></td>
+                <td>Unique alphanumeric identifier required for every outfit.</td>
+            </tr>
+            <tr>
+                <td><code>category</code></td>
+                <td><code>(Casual | Formal | Party | Winter | Athleisure)</code></td>
+                <td>Enumeration: Category must be strictly one of these 5 permitted values.</td>
+            </tr>
+            <tr>
+                <td><code>accessories?</code></td>
+                <td><code>accessories?</code></td>
+                <td>Zero or one (optional) accessories section allowed inside <code>pieces</code>.</td>
+            </tr>
+            <tr>
+                <td><code>currency</code></td>
+                <td><code>currency CDATA #FIXED "INR"</code></td>
+                <td>Fixed attribute: must always equal "INR".</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="margin-top: 25px; padding: 15px; background: #ecfdf5; border-radius: 6px; color: #065f46;">
+        ✅ <strong>Validation Status:</strong> The accompanying <code>outfits.xml</code> adheres strictly to these declarations and passes XML DTD validation checks.
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+[
+  {
+    "id": "J101",
+    "name": "Weekend Vintage Leather",
+    "category": "Casual",
+    "season": "Autumn",
+    "price": 4200,
+    "top": "Distressed Brown Leather Jacket & White Waffle Tee",
+    "bottom": "Raw Indigo Selvedge Denim",
+    "footwear": "Classic Amber Harness Boots",
+    "tags": ["Vintage", "Rugged", "Casual"]
+  },
+  {
+    "id": "J102",
+    "name": "Summer Linen Resort Set",
+    "category": "Resort / Vacation",
+    "season": "Summer",
+    "price": 2850,
+    "top": "Camp-Collar Sage Green Linen Shirt",
+    "bottom": "Off-White Drawstring Linen Trousers",
+    "footwear": "Woven Leather Espadrilles",
+    "tags": ["Summer", "Breathable", "Light"]
+  },
+  {
+    "id": "J103",
+    "name": "Monochrome Techwear Outfit",
+    "category": "Streetwear",
+    "season": "Monsoon / Winter",
+    "price": 5400,
+    "top": "Waterproof Shell Parka & Compression Tee",
+    "bottom": "Strapped Multi-pocket Cargo Pants",
+    "footwear": "GORE-TEX All-Terrain Sneakers",
+    "tags": ["Techwear", "Modern", "Waterproof"]
+  }
+]

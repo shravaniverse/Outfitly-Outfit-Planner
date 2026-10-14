@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outfitly - JavaScript Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="form-wrapper">
+        <header class="form-header">
+            <h2>👗 Outfitly Membership</h2>
+            <p>Practical 4: Client-Side JavaScript Form Validation</p>
+        </header>
+
+        <!-- Dynamic Success Banner (Shown via JavaScript) -->
+        <div id="successBanner" class="success-banner">
+            <h3>🎉 Registration Successful!</h3>
+            <p id="successMessage">Welcome to Outfitly. Your wardrobe profile has been validated and created.</p>
+            <a href="../week-01-html-pages/login.html" style="display: inline-block; background-color: #059669; color: white; padding: 8px 16px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 0.88rem; margin-top: 10px;">Proceed to Login →</a>
+        </div>
+
+        <!-- Dynamic Error Banner (Shown via JavaScript) -->
+        <div id="errorBanner" class="error-banner">
+            <h3>⚠️ Registration Failed</h3>
+            <p id="errorMessage"></p>
+        </div>
+
+        <!-- Registration Form with novalidate so JS handles the validation -->
+        <form id="registrationForm" novalidate>
+            
+            <!-- Full Name -->
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" class="form-control" placeholder="e.g. Maya Sharma">
+                <small class="error-message" id="nameError"></small>
+            </div>
+
+            <!-- Email Address -->
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" class="form-control" placeholder="maya@example.com">
+                <small class="error-message" id="emailError"></small>
+            </div>
+
+            <!-- Password & Confirm Password Row -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-control" placeholder="Min 8 chars, 1 number, 1 special">
+                    <small class="error-message" id="passwordError"></small>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" class="form-control" placeholder="Re-enter password">
+                    <small class="error-message" id="confirmPasswordError"></small>
+                </div>
+            </div>
+
+            <!-- Phone Number & Style Preference Row -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone">Phone Number (10 Digits)</label>
+                    <input type="tel" id="phone" class="form-control" placeholder="9876543210">
+                    <small class="error-message" id="phoneError"></small>
+                </div>
+                <div class="form-group">
+                    <label for="stylePreference">Favorite Style</label>
+                    <select id="stylePreference" class="form-control">
+                        <option value="">-- Select Category --</option>
+                        <option value="Casual Chic">Casual Chic</option>
+                        <option value="Corporate Formal">Corporate Formal</option>
+                        <option value="Streetwear & Sneakers">Streetwear & Sneakers</option>
+                        <option value="Festive Ethnic">Festive Ethnic</option>
+                        <option value="Athleisure">Athleisure</option>
+                    </select>
+                    <small class="error-message" id="styleError"></small>
+                </div>
+            </div>
+
+            <!-- Terms & Conditions Checkbox -->
+            <div class="checkbox-group">
+                <input type="checkbox" id="termsAgree">
+                <label for="termsAgree">I agree to Outfitly's Terms of Service and Wardrobe Data Policy</label>
+            </div>
+            <small class="error-message" id="termsError" style="margin-top: -15px; margin-bottom: 15px;"></small>
+
+            <!-- Action Buttons -->
+            <div class="btn-group">
+                <button type="submit" id="submitBtn" class="btn-submit">Complete Registration</button>
+                <button type="button" id="resetBtn" class="btn-reset">Reset</button>
+            </div>
+
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

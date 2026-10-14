@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ================================================================
+     OUTFITLY - PRACTICAL 7: XML FILE WITH DTD VALIDATION
+     Links to external DTD file 'outfits.dtd' for strict schema validation.
+     ================================================================ -->
+<!DOCTYPE wardrobe SYSTEM "outfits.dtd">
+
+<wardrobe owner="Alex Sharma" seasonYear="2026">
+
+    <!-- Outfit Record 1: Casual Campus Look -->
+    <outfit id="OFT101" category="Casual" gender="Unisex">
+        <name>Urban Denim Campus Ensemble</name>
+        <occasion>Daily Lectures &amp; Library</occasion>
+        <season>Autumn</season>
+        <pieces>
+            <top fabric="Cotton" color="Navy Blue">Crewneck Tee with Chambray Overshirt</top>
+            <bottom fabric="Stretch Twill" color="Charcoal Grey">Slim-fit Chino Pants</bottom>
+            <footwear style="Sneakers" color="White">Minimalist Low-Top Leather Sneakers</footwear>
+            <accessories>
+                <item type="Watch">Matte Black Analog Watch</item>
+                <item type="Bag">Waterproof Laptop Backpack</item>
+            </accessories>
+        </pieces>
+        <price currency="INR">2499</price>
+        <rating>4.8</rating>
+        <inStock>true</inStock>
+        <stylingAdvice>Roll overshirt sleeves up to forearm level for an easy, effortless silhouette.</stylingAdvice>
+    </outfit>
+
+    <!-- Outfit Record 2: Corporate Formal Look -->
+    <outfit id="OFT102" category="Formal" gender="Menswear">
+        <name>Executive Presentation Blazer Set</name>
+        <occasion>Internship Viva &amp; Project Reviews</occasion>
+        <season>All-Season</season>
+        <pieces>
+            <top fabric="Super 120s Wool" color="Navy Blue">Two-Button Structured Blazer &amp; White Shirt</top>
+            <bottom fabric="Tailored Wool" color="Navy Blue">Flat-front Formal Trousers</bottom>
+            <footwear style="Oxfords" color="Cognac Brown">Full Grain Leather Dress Shoes</footwear>
+            <accessories>
+                <item type="Tie">Silk Micro-Print Navy Tie</item>
+                <item type="Belt">Full Grain Leather Belt Matching Shoes</item>
+            </accessories>
+        </pieces>
+        <price currency="INR">6999</price>
+        <rating>4.9</rating>
+        <inStock>true</inStock>
+        <stylingAdvice>Ensure belt leather tone strictly matches footwear for a sharp executive finish.</stylingAdvice>
+    </outfit>
+
+    <!-- Outfit Record 3: Winter Overcoat (Without accessories to test ? operator) -->
+    <outfit id="OFT103" category="Winter" gender="Unisex">
+        <name>Minimalist Wool Winter Coat</name>
+        <occasion>Cold Morning Walks</occasion>
+        <season>Winter</season>
+        <pieces>
+            <top fabric="Wool Blend" color="Beige">Camel Long Coat</top>
+            <bottom fabric="Corduroy" color="Brown">Straight Warm Trousers</bottom>
+            <footwear style="Boots" color="Dark Tan">Leather Chelsea Boots</footwear>
+        </pieces>
+        <price currency="INR">5299</price>
+        <rating>4.7</rating>
+        <inStock>true</inStock>
+        <stylingAdvice>Keep coat unbuttoned with hands in pocket for a relaxed winter walk.</stylingAdvice>
+    </outfit>
+
+</wardrobe>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outfitly - Practical 8: Fetch API Text</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app-card">
+        <header class="header">
+            <h1>👗 Outfitly Style Advisor</h1>
+            <p>Practical 8: Asynchronously Loading Plain Text Files Using the Fetch API</p>
+        </header>
+
+        <!-- Control Action Buttons -->
+        <div class="btn-container">
+            <button id="loadTipBtn" class="btn-action">Load Daily Styling Tip (.txt)</button>
+            <button id="loadCareBtn" class="btn-action secondary">Load Fabric Care Guide (.txt)</button>
+            <button id="loadErrorBtn" class="btn-action danger">Test 404 Error Handling</button>
+        </div>
+
+        <!-- Dynamic Status Message -->
+        <div id="statusIndicator" class="status-badge"></div>
+
+        <!-- Display Area for Asynchronously Loaded Content -->
+        <div id="contentDisplay" class="display-box">
+            <span class="placeholder-text">Click any of the buttons above to fetch text data asynchronously without reloading the page...</span>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
